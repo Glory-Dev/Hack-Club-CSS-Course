@@ -1,0 +1,117 @@
+/* Animation
+- @keyframes                => To Start Animation
+- animation-name            => The Name Of Animation Keyframes
+- animation-duration        => What Time Does The Element Take To End The Animation
+- animation-iteration-count => How many Animation
+- animation-timing-function => How Does The Animation Running
+- animation-direction       => The Direction Of The Animation
+- animation-delay           => How Much Time Does The Element Take To Start Animation
+- animation-fill-mode       => The State Which Element Take After Ending The Animation
+- animation-play-state      => The State Of The Animation
+
+- Shorthand => (Name) (Duration) (Timing Function) (Iteration Count) (Direction)
+Ex => animation: elzero 0s ease 1 normal
+*/
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Task 1 */
+/* div {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  position: relative;
+  border: 5px solid #e91e63;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+div:hover {
+  animation-play-state: paused;
+}
+div::before,
+div::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+div::before {
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  top: -12.5px;
+  left: -12.5px;
+  border: 5px solid #2196f3;
+  border-bottom-color: transparent;
+}
+div::after {
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: -20px;
+  left: -20px;
+  border: 5px solid #ffc107;
+  border-left-color: transparent;
+} */
+
+/* Task 2 */
+div {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  position: relative;
+  border: 5px solid #2196f3;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+  animation-play-state: paused;
+}
+div:hover,
+div:hover::before,
+div:hover::after {
+  animation-play-state: running;
+}
+div::before,
+div::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+div::before {
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  top: -12.5px;
+  left: -12.5px;
+  border: 5px solid #ffc107;
+  border-bottom-color: transparent;
+  animation: spinner 1.5s linear infinite;
+  animation-play-state: paused;
+}
+div::after {
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: -20px;
+  left: -20px;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  animation: spinner 5s linear infinite;
+  animation-play-state: paused;
+}
+
+/* Task 3 */
+span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  position: relative;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}

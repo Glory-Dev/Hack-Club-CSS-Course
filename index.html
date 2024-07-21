@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="master.css" />
+    <style>
+      body {
+        display: flex;
+        margin-left: 50px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .one p + div {
+        color: red;
+      }
+      .two {
+        border-left: 1px solid black;
+        margin-left: 20px;
+        padding-left: 20px;
+        
+      }
+      .two p ~ div {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <p>This is a pargraph</p>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+    </div>
+    <div class="two">
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <p>This is a pargraph</p>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+      <div>This is a div</div>
+    </div>
+  </body>
+</html>

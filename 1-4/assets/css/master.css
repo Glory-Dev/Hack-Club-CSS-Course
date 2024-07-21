@@ -1,0 +1,9 @@
+div {
+  width: 200px;
+  color: white;
+  background-color: #009688;
+  padding: 20px;
+  margin: 50px;
+  border: 5px solid red;
+  outline: 10px dotted blue;
+}

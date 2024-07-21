@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==> Grid
+  Parent
+  - diplay : grid | inline-grid
+  - grid-template-columns : => [Number Of Columns In]     => [Px, %, Auto, Fraction, Repeat(), Mix]
+  - grid-template-rows :    => [Number Of Rows Height In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+  - gap : [Row Gap] [Column Gap] (Shorthand)
+  - justify-content
+  - align-content
+  - grid-template-areas
+  Child
+  - grid-row : [Grid Row Start] [Grid Row End] (Shorthand)
+  - grid-column : [Grid Column Start] [Grid Column End] (Shorthand)
+  - grid-area : [Grid Row Start] [Grid Column Start] [Grid Row End] [Grid Column End] (Shorthand)
+*/
+
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  /* Grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: space-between;
+}
+.grid div {
+  background-color: #e91e63;
+  color: white;
+  text-align: center;
+}

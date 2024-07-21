@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-color-one: #ff5722;
+  --main-color-two: #009688;
+}
+h1 {
+  width: 150px;
+  padding: 15px;
+  padding-left: 30px;
+  color: #fff;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  background-color: var(--main-color-two);
+}
+h1::before {
+  content: '';
+  top: 0;
+  left: -15px;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  transform: skewX(20deg);
+  border-right: 7px solid white;
+  background-color: var(--main-color-two);
+}

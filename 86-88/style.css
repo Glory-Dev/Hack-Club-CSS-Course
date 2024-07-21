@@ -1,0 +1,42 @@
+div {
+  padding: 20px;
+  width: 300px;
+  margin: 30px auto;
+  background-color: #CCC;
+}
+.arrow {
+  position: relative;
+}
+.arrow::before {
+  content: "";
+  position: absolute;
+  border: 15px solid transparent;
+}
+.arrow.top::before, .arrow.bottom::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top::before {
+  top: -30px;
+  border-bottom-color: #CCC;
+}
+.arrow.bottom::before {
+  bottom: -30px;
+  border-top-color: #CCC;
+}
+.arrow.left::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  border-right-color: #CCC;
+}
+.arrow.right::before {
+  top: 50%;
+  transform: translateY(-50%);
+  right: -30px;
+  border-left-color: #CCC;
+}
+
+.class-1.class-2.class-3 {
+  
+}

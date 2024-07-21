@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Task 1 */
+@media print {
+  .assign-one {
+    font-size: 40px;
+  }
+}
+
+/* Task 2 */
+.assign-two {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.assign-two .child {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.assign-two .child h2 {
+  color: #009688;
+}
+@media (max-width: 991.98px) {
+  .assign-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .assign-two .child h2 {
+    color: red;
+  }
+}
+@media (max-width: 767.98px) {
+  .assign-two {
+    grid-template-columns: auto;
+  }
+  .assign-two .child h2 {
+    color: black;
+  }
+}
+
+/* Task 3 Mobile First */
+.assign-three .child {
+  padding: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+@media (min-width: 768px) {
+  .assign-three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .assign-three .child {
+    margin-bottom: 0;
+    flex: 1;
+    flex-basis: auto;
+  }
+  .assign-three .child:first-of-type {
+    flex-basis: 100%;
+  }
+  .assign-three .child h2 {
+    color: red;
+  }
+}
+@media (min-width: 992px) {
+  .assign-three .child:last-of-type {
+    flex-basis: 100%;
+  }
+  .assign-three .child h2 {
+    color: #009688;
+  }
+}

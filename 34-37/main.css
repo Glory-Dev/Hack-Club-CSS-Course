@@ -1,0 +1,19 @@
+p {
+  margin: 20px auto;
+  background-color: #eee;
+  padding: 15px;
+  padding-left: 50px;
+  width: 400px;
+  border-right: 5px solid rgb(255, 98, 0);
+  position: relative;
+  counter-increment: products;
+}
+p::before {
+  content: counter(products);
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 15px;
+  background-color: rgb(255, 98, 0);
+  color: white;
+}
